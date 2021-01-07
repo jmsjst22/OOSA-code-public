@@ -16,5 +16,5 @@ The **iterating** directory contains some exercises to practice using loops and 
 
 ## Week 1
 
-Will contain the matieral for week 1 as we work through the class.
+Will contain the material for week 1 as we work through the class.
 
