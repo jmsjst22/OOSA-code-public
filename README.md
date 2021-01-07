@@ -4,7 +4,7 @@ There is a separate directory for each week's work. As we progress, suggested an
 
 ## Foundations
 
-The *foundations* folder contains some warm up exercises to transition on to the course. There are two folders within:
+The **foundations** folder contains some warm up exercises to transition on to the course. There are two folders within:
 
 * basic\_features
 * iterating
