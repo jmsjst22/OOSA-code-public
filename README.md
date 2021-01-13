@@ -16,10 +16,44 @@ The **iterating** directory contains some exercises to practice using loops and 
 
 ## Week 1
 
-Will contain the material for week 1 as we work through the class.
+Week 1 covers:
+
+***Aspects***
+* Github version control and code repository
+* Computer basics 
+* Revision of loops and file I/O
+
+***Algorithm***
+* Introduction to algorithm design: Finding minima and sorting
+
+Material will be added as we progress through the class.
+
 
 ### fileIO
 
 Contains two scripts to demonstrate reading from a text file and writing to a text file. The ***data*** folder contains the data for the file reading example.
 
+
+## Week 2
+
+This week covers
+
+***Aspects***
+* Using the command line to make programmable programs
+* Objects and classes
+
+***Algorithm***
+* Binary search: Loop and recursion
+
+### command\_line
+
+Contains two files. *commandExample.py* is a minimum workable example for a command line interface. *commandLineIllus.py* shows an example of most of the common options you might want to add to a command line, in terms of the data types read.
+
+### main
+
+Contains *mainTest.py* to give an example of defining the main block.
+
+### data
+
+Contains an ASCII data file to use if needed.
 
