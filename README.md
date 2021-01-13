@@ -18,3 +18,8 @@ The **iterating** directory contains some exercises to practice using loops and 
 
 Will contain the material for week 1 as we work through the class.
 
+### fileIO
+
+Contains two scripts to demonstrate reading from a text file and writing to a text file. The ***data*** folder contains the data for the file reading example.
+
+
