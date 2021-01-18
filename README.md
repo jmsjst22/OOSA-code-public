@@ -57,3 +57,7 @@ Contains *mainTest.py* to give an example of defining the main block.
 
 Contains an ASCII data file to use if needed.
 
+### objects
+
+Contains an example of an object to show how attributes (data) and methods (functions) can be combined within an object.
+
