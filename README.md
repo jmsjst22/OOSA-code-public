@@ -26,12 +26,15 @@ Week 1 covers:
 ***Algorithm***
 * Introduction to algorithm design: Finding minima and sorting
 
-Material will be added as we progress through the class.
-
 
 ### fileIO
 
 Contains two scripts to demonstrate reading from a text file and writing to a text file. The ***data*** folder contains the data for the file reading example.
+
+
+### sort
+
+This includes an example of a selection sort algorithm, which finds the minimum of a list and copies that to the start of an array.
 
 
 ## Week 2
