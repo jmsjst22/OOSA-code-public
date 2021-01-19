@@ -64,3 +64,8 @@ Contains an ASCII data file to use if needed.
 
 Contains an example of an object to show how attributes (data) and methods (functions) can be combined within an object.
 
+
+### docu\_strings
+
+Contains an illustration of docu strings in python.
+
