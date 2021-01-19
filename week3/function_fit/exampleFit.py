@@ -32,6 +32,8 @@ class dataFit(object):
     print("Correlation is",self.correl)
     # other error metrics are available
 
+    # scipy.linregress() is another good package for straight lines
+
 
   def plotLine(self,outName):
     '''Plot our line of best fit'''
