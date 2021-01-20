@@ -42,10 +42,6 @@ if __name__ == '__main__':
   # read the command line
   cmdargs=getCmdArgs()
 
-<<<<<<< HEAD
-  # access the command line variables
-=======
   # access a command line variable as an example
->>>>>>> 9fc5bf46b8ad38c0f8e2b3766e4917f38bf7714a
   cmdargs.useSnow
 
