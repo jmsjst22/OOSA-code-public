@@ -73,3 +73,43 @@ Contains an illustration of docu strings in python.
 ### binary\_search
 
 Contains a class with a data sorter. This should be built upon to add a binary search method.
+
+
+## Week 3
+
+Contains the scripts for week 3's session. Week 3 will cover:
+
+***Aspects***
+* Geospatial packages: pyproj and gdal
+* Function fitting
+* note on function input/output
+* mention of pandas
+
+***Algorithm***
+* Douglas-Peucker line generalization
+
+
+### data
+
+Contains two data files, both in .csv format. One contains synthetic wage and age data. The other contains the GPS track of a sdquirrel.
+
+
+### reproject
+
+Contains an example of using the ***pyproj*** package to reproject vector data and the ***GDAL*** package to reproject raster data.
+
+
+### function\_fit
+
+Shows an exmaple of using numpy's polyfit function to fit a straight line. It does this within a class which includes a method for plotting the inut data and the fitted line.
+
+Example usage:
+
+    python3 exampleFit.py
+
+This will print the correlation coefficient to screen and create a graph in .png format.
+
+### pandas
+
+Contains a very brief example of the pandas package. This builds upon numpy arrays in a way that recreates the utility of R dataframes. Some users prefer pandas to numpy arrays. The geopandas package builds upon pandas and is a very powerful package for geospatial analysis.
+
