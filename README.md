@@ -69,3 +69,7 @@ Contains an example of an object to show how attributes (data) and methods (func
 
 Contains an illustration of docu strings in python.
 
+
+### binary\_search
+
+Contains a class with a data sorter. This should be built upon to add a binary search method.
