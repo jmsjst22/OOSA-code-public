@@ -75,6 +75,22 @@ Contains an illustration of docu strings in python.
 Contains a class with a data sorter. This should be built upon to add a binary search method.
 
 
+***binarySearches.py*** contains an examples of functioasn to perform a binary search by both looping and recursion.
+
+***finishedQuartiles.py*** Combines the binary search functions with a dataSorter array to read some wages data, sort it and then return the quantiles for a given value, specified on the command line.
+
+***randomWages.py*** shows an example of this being used in practice, importing the functions and classes from the other scripts to read in a file of wages and determine quantiles.
+
+Command line options:
+
+    --wage WAGE     Wage to determine the quantile of. Default is 27,000
+    --input INNAME  Input file to read data rom. Default is ../data/wages.csv
+
+Usage example:
+
+   python3 finishedQuartiles.py --wage 16000
+
+
 ## Week 3
 
 Contains the scripts for week 3's session. Week 3 will cover:

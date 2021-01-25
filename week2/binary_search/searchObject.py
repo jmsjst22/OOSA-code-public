@@ -29,11 +29,15 @@ class dataSorter(object):
     for i in range(0,copArr.shape[0]):
       minN,minInd=self.findMin(copArr)
       self.sortArr[i]=minN
-      copArr[minInd]=1000000
+      copArr[minInd]=10000000
 
-  def findMin(self,arrToMin):
-    '''Find a minimum, needed for soret'''
-    print("Could not complete function. Needs finishing.")
-    print(" Exiting program now")
-    exit
+  def findMin(self,arr):
+    '''A minimum fuinding function'''
+    minN=10000000  # a big number
+    minInd=0
+    for i in range(0,arr.shape[0]):
+      if(arr[i]<minN):
+        minN=arr[i]
+        minInd=i
+    return(minN,minInd)
 
