@@ -4,17 +4,32 @@ An example of how to use the
 LVIS python scripts
 '''
 
-from processLVIS import lvisGround
+from lvisClass import lvisData
 
+
+
+##########################################
+
+class plotLVIS(lvisData):
+  '''A class, ineriting from lvisData
+     and add a plotting method'''
+
+
+  def plotWaves(self):
+    '''A method to plot all waveforms'''
+
+    # this needs completing
+
+##########################################
 
 
 if __name__=="__main__":
   '''Main block'''
 
-  filename='/geos/netdata/avtrain/data/3d/oosa/week4/lvis_antarctica/ILVIS1B_AQ2015_1014_R1605_070717.h5'
+  filename='/geos/netdata/oosa/week4/lvis_antarctica/ILVIS1B_AQ2015_1014_R1605_070717.h5'
 
   # create instance of class with "onlyBounds" flag
-  b=lvisGround(filename,onlyBounds=True)
+  b=plotLVIS(filename,onlyBounds=True)
 
   # to make a MWE,
   # from the total file bounds
@@ -26,10 +41,10 @@ if __name__=="__main__":
 
 
   # read in all data within our spatial subset
-  lvis=lvisGround(filename,minX=x0,minY=y0,maxX=x1,maxY=y1)
+  lvis=plotLVIS(filename,minX=x0,minY=y0,maxX=x1,maxY=y1)
 
   # set elevation
   lvis.setElevations()
 
-  # plot up some waveforms
+  # plot up some waveforms using your new method
 
