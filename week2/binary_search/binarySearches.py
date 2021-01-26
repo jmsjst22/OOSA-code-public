@@ -7,29 +7,22 @@ by loop and by recursion
 
 #############################################
 
-def setMidP(start,end):
-  '''sets the mid point from the start and end'''
-  return((start+end)//2)   # note that "//" is an integer division
-
-
-#############################################
-
 def binarySearch(x,v):
   '''Binary search for v in x by looping'''
 
   # set first break point and ends
   start=0              # the start index
   end=len(x)           # the end index
-  midP=setMidP(start,end) # middle point index
+  midP=(start+end)//2  # the mid point
 
   # loop over
   while((end-start)>1):
     if(x[midP]<v):   # answer is to the right
       start=midP
-      midP=setMidP(start,end)
+      midP=(start+end)//2
     elif(x[midP]>v):   # answer is to the left
       end=midP
-      midP=setMidP(start,end) 
+      midP=(start+end)//2 
     elif(x[midP]==v):  # found answer, unlikely
       break
   return(x[midP],midP)
@@ -41,7 +34,7 @@ def binaryRecurse(x,v,start,end):
   '''Binary search for v in x by recursion'''
 
   # set first break point and ends
-  ind=setMidP(start,end) # middle point index
+  ind=(start+end)//2 # middle point index
   thisVal=x[ind]
 
   # are we at the lowest level? If so, we are there
