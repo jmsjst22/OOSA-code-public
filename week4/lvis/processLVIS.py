@@ -15,6 +15,7 @@ from scipy.ndimage.filters import gaussian_filter1d
 class lvisGround(lvisData):
   '''
   LVIS class with extra processing steps
+  to allow it to found the ground over ice
   '''
 
   #######################################################
