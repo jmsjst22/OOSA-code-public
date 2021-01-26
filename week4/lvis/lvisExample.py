@@ -4,6 +4,8 @@ An example of how to use the
 LVIS python scripts
 '''
 
+# import the HDF5 data handler class
+
 from lvisClass import lvisData
 
 
@@ -14,10 +16,13 @@ class plotLVIS(lvisData):
   '''A class, ineriting from lvisData
      and add a plotting method'''
 
+  def reprojectLVIS(self,outEPSG):
+    '''A method to reproject the geolocation data'''
+    # method incomplete
+
 
   def plotWaves(self):
     '''A method to plot all waveforms'''
-
     # this needs completing
 
 ##########################################
@@ -45,6 +50,9 @@ if __name__=="__main__":
 
   # set elevation
   lvis.setElevations()
+
+
+  # reproject the data
 
   # plot up some waveforms using your new method
 
