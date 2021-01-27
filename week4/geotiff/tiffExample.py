@@ -32,8 +32,11 @@ def writeTiff(data,x,y,res,filename="lvis_image.tif"):
 
   # pack in to array
   imageArr=np.full((nY,nX),-999.0)        # make an array of missing data flags
-  xInds=np.array((x-minX)/res,dtype=int)  # determine which pixels the data lies in
-  yInds=np.array((maxY-y)/res,dtype=int)  # determine which pixels the data lies in
+
+  xInds=?    # this needs finishing
+  yInds=?    # find the index of the raster pixel
+             # that this coordinate corresponds to
+
   # this is a simple pack which will assign a single footprint to each pixel
   imageArr[yInds,xInds]=data
 
