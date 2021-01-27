@@ -15,6 +15,9 @@ def binarySearch(x,v):
   end=len(x)           # the end index
   midP=(start+end)//2  # the mid point
 
+  # a flag to let us know if the exact number has been found
+  foundExact=False
+
   # loop over
   while((end-start)>1):
     if(x[midP]<v):   # answer is to the right
@@ -24,7 +27,14 @@ def binarySearch(x,v):
       end=midP
       midP=(start+end)//2 
     elif(x[midP]==v):  # found answer, unlikely
+      foundExact=True  # have found exact answer
       break
+
+  # if we have not found the exact answer, find the closest element
+  if(foundExact==False):
+    sep=np.abs(x[start:end]-v)  # use a slice to find the absolute distance
+    midP=sep.argmin()+start     # set mid point as element with smallest distance
+
   return(x[midP],midP)
 
 
@@ -37,8 +47,12 @@ def binaryRecurse(x,v,start,end):
   ind=(start+end)//2 # middle point index
   thisVal=x[ind]
 
-  # are we at the lowest level? If so, we are there
+  # Once we have two elements left, both have been checked and neither is exact
   if((end-start)<=1):
+    # we can find the closest of the two to our value
+    sep=np.abs(x[start:end]-v)  # use a slice to find the absolute distance
+    ind=sep.argmin()+start      # set mid point as element with smallest distance
+    thisVal=x[ind]
     return(thisVal,ind)
 
   if(thisVal<v):   # to the right
