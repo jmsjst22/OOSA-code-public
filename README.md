@@ -129,3 +129,21 @@ This will print the correlation coefficient to screen and create a graph in .png
 
 Contains a very brief example of the pandas package. This builds upon numpy arrays in a way that recreates the utility of R dataframes. Some users prefer pandas to numpy arrays. The geopandas package builds upon pandas and is a very powerful package for geospatial analysis.
 
+
+### dp-line-general
+
+Contains an example solution of the Douglas-Peucker line-generalistion, using recursion. Note that this depends upon two other files within this repository and uses the ***PYTHONPATH*** to import these. These dependecies are:
+
+    vectorExample.py
+    perpendicular_distance
+
+The options are:
+
+    --input INNAME   Input filename
+    --tolerance TOL  Tolerance of generalisation Default = 10
+    --epsg EPSG      EPSG to do analysis in Default = 27700
+
+An example usage would be:
+
+    python3 exampleDP.py --epsg 32630
+
