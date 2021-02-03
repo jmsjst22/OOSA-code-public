@@ -147,3 +147,20 @@ An example usage would be:
 
     python3 exampleDP.py --epsg 32630
 
+
+## Week 5
+
+Week 5 covers
+
+***Aspects***
+* Raster analysis
+* More batch processing
+* A few more useful packages
+
+***Algorithm***
+* Practice all of the above
+
+### geopandas
+
+Includes an example of using geopandas to read and reproject some vector data.
+
