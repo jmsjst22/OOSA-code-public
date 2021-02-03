@@ -164,3 +164,14 @@ Week 5 covers
 
 Includes an example of using geopandas to read some vector data from a .csv file, reproject and write to a shape file.
 
+Usage:
+
+    python3 geopandasExample.py
+
+Command line options:
+
+    --inEpsg INEPSG    Input EPSG code
+    --outEpsg OUTEPSG  Output EPSG code
+    --input INNAME     Input filename (csv file)
+    --output OUTNAME   Output filename (shape file)
+
