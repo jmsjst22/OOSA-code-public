@@ -162,5 +162,5 @@ Week 5 covers
 
 ### geopandas
 
-Includes an example of using geopandas to read and reproject some vector data.
+Includes an example of using geopandas to read some vector data from a .csv file, reproject and write to a shape file.
 
