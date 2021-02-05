@@ -122,7 +122,7 @@ class lvisData(object):
      '''
      Dump bounds
      '''
-     return(np.min(self.lon),np.min(self.lat),np.max(self.lon),np.max(self.lat))
+     return[np.min(self.lon),np.min(self.lat),np.max(self.lon),np.max(self.lat)]
 
 
 ###########################################
