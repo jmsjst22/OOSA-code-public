@@ -11,6 +11,7 @@ from processLVIS import lvisGround   # we are importing the version with
 from pyproj import Proj, transform
 import matplotlib.pyplot as plt
 import argparse
+import numpy as np
 
 
 ##########################################
@@ -55,22 +56,23 @@ class plotLVIS(lvisGround):
     self.bounds[0,2],self.bounds[1,3]=transform(inProj, outProj, self.bounds[0,2], self.bounds[1,3])
 
 
-  def plotWaves(self,step=1):
+  def plotWaves(self,outRoot="waveform",step=1):
     '''A method to plot all waveforms'''
 
     # loop over list of waveforms
-    for i in range(start,end,step,outRoot="waveform"):
-      plotLVIS.plotWave(outRoot=outRoot)
+    for i in range(0,self.nWaves,step):
+      self.plotWave(i,outRoot=outRoot)
 
 
-  def plotWave(self,outRoot="waveform"):
+  def plotWave(self,i,outRoot="waveform"):
     ''''A method to plot a single waveform'''
     outName=outRoot+"."+str(i)+".png"
-    plt.plot(self.wave[i,:],self.z[i])
+    plt.plot(self.waves[i],self.z[i])
     plt.xlabel("Waveform return")
     plt.ylabel("Elevation (m)")
     plt.savefig(outName)
     plt.close()
+    print("Graph to",outName)
 
 
 ##########################################
@@ -97,7 +99,7 @@ if __name__=="__main__":
   for x0 in np.arange(b.bounds[0],b.bounds[2],step):  # loop over x tiles
     x1=x0+step   # the right side of the tile
     for y0 in np.arange(b.bounds[1],b.bounds[3],step):  # loop over y tiles
-      y1=y1+step  # the top of the tile
+      y1=y0+step  # the top of the tile
 
       # print the bounds to screen as a sanity check
       print("Tile between",x0,y0,"to",x1,y1)
@@ -112,6 +114,6 @@ if __name__=="__main__":
       lvis.reprojectLVIS(3031)    # were making a DTM
 
       # plot up some waveforms using your new method
-      lvis.plotWaves(step=int(lvis.nWaves/100),outRoot=outRoot+"."+str(x0,y0))  # this will print 100 waveforms
+      lvis.plotWaves(step=int(lvis.nWaves/100),outRoot=outRoot+".x."+str(x0)+".y."+str(y0))  # this will print 100 waveforms
                                                                                 # updating the filename as it goes
 
