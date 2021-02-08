@@ -33,9 +33,9 @@ def writeTiff(data,x,y,res,filename="lvis_image.tif"):
   # pack in to array
   imageArr=np.full((nY,nX),-999.0)        # make an array of missing data flags
 
-  xInds=?    # this needs finishing
-  yInds=?    # find the index of the raster pixel
-             # that this coordinate corresponds to
+  # use integer division to determine which pixel each belongs to
+  xInds=(x-minX)//res
+  yInds=(maxY-y)//res   # remember that y in a geotiff counts from the top
 
   # this is a simple pack which will assign a single footprint to each pixel
   imageArr[yInds,xInds]=data

@@ -148,6 +148,48 @@ An example usage would be:
     python3 exampleDP.py --epsg 32630
 
 
+## Week 4
+
+Week 4 covers
+
+***Aspects***
+* Further arrays
+* HDF5 and geotiff packages
+* Raster-vector calculations
+
+***Algorithm***
+* Batch processing: Raster-vector intersection
+
+### pointer\_reference
+
+Contains a small example of how setting a variable equal to an array copies the pointer rather than all the data, resulting in a shared memory space which can be altered via either vairable name.
+
+
+### geotiff
+
+Contains an example of a function to take vector data as an array of x coordinates, y coordinate and some variable of interest (ground elevation here) and rasterise it to a geotiff at a given resolution.
+
+Note that in this case, each pixel is set equal to a single data point within it. If there are multiple vector points per raster pixel, the other vector points will not be used in the calculation.
+
+### lvis
+
+Contains scripts to handle LVIS data.
+
+    ***lvisClass.py*** contains a class to read LVIS data in to RAM
+    ***processLVIS.py*** inherits from lvisClass.py and adds ground finding methods
+    ***lvisExample.py*** is some starter code to illustrate batch processing
+    ***lvisCompleteExample.py*** completes the above to batch process graphs in spatial subset tiles
+
+Usage
+
+    python3 lvisCompleteExample.py --input **filename**
+
+Command line options are
+
+    --input INNAME     Input filename
+    --outRoot OUTROOT  Output filename root
+
+
 ## Week 5
 
 Week 5 covers
